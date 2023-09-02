@@ -6,35 +6,40 @@
 //
 //COURSE VIEW FILE
 import SwiftUI
+import AVKit
+import WebKit
+
 
 struct CourseView: View {
     var body: some View {
         NavigationView {
-            VStack {
-                Text("Java Beginner Course")
-                    .font(.largeTitle)
-                    .padding()
+                    VStack {
+                        Text("Java Beginner Course")
+                            .font(.largeTitle)
+                            .padding()
 
-                Text("Learn the fundamentals of Java programming.")
-                    .font(.subheadline)
-                    .foregroundColor(.gray)
-                    .padding()
+                        Text("Hello")
+                            .font(.subheadline)
+                            .foregroundColor(.gray)
+                            .padding()
 
-                List {
-                    ForEach(0..<CourseDataService.topics.count, id: \.self) { index in
-                        NavigationLink(
-                            destination: TopicDetailView(
-                                topic: CourseDataService.topics[index],
-                                quizQuestions: primitiveTypesQuiz // Pass the appropriate quiz questions here
-                            )
-                        ) {
-                            Text(CourseDataService.topics[index].title)
+                        List {
+                            ForEach(0..<CourseDataService.topics.count, id: \.self) { index in
+                                NavigationLink(
+                                    destination: TopicDetailView(
+                                        topic: CourseDataService.topics[index],
+                                        quizQuestions: primitiveTypesQuiz // Pass the appropriate quiz questions here
+                                    )
+                                ) {
+                                    Text(CourseDataService.topics[index].title)
+                                }
+                            }
                         }
                     }
+                    .navigationBarTitle("JAVA", displayMode: .inline)
                 }
-            }
-            .navigationBarTitle("Home", displayMode: .inline)
-        }
+
+
     }
     func getQuizQuestions(for topic: Topic) -> [QuizQuestion] {
         switch topic.title {
@@ -58,6 +63,10 @@ extension CourseView {
     struct TopicDetailView: View {
         let topic: Topic
         let quizQuestions: [QuizQuestion]
+        let player = AVPlayer(url: URL(fileURLWithPath: Bundle.main.path(forResource: "Primitive", ofType: "mp4")!))
+//        let layer = AVPlayerLayer(player: player)
+//        layer.frame = view.bounds
+//        view.layer.addSublayer(layer)
         
         @State private var selectedAnswerIndex: Int? = nil
         @State private var isCorrect: Bool = false
@@ -73,35 +82,33 @@ extension CourseView {
                     .font(.body)
                     .padding(.bottom, 0)
                     .padding(.horizontal)
+                VideoView(videoID: "CX-BdDHW0Ho")
+                
+
+                
                 Spacer()
                 
-                Section(header: Text("Quiz").font(.headline)) {
-                    ForEach(0..<quizQuestions.count, id: \.self) { index in
-                        QuizOptionView(
-                            question: quizQuestions[index].question,
-                            options: quizQuestions[index].options,
-                            correctAnswerIndex: quizQuestions[index].correctAnswerIndex,
-                            selectedAnswerIndex: $selectedAnswerIndex,
-                            isCorrect: isCorrect,
-                            checkAnswer: { selectedOptionIndex in
-                                checkAnswer(questionIndex: index, selectedOptionIndex: selectedOptionIndex)
-                            }
-                        )
-                    }
-                }
-            }
-            .navigationBarTitle(topic.title, displayMode: .inline)
-        }
-        
-        func checkAnswer(questionIndex: Int, selectedOptionIndex: Int?) {
-            if selectedOptionIndex == quizQuestions[questionIndex].correctAnswerIndex {
-                isCorrect = true
-            } else {
-                isCorrect = false
+                    .navigationBarTitle(topic.title, displayMode: .inline)
             }
         }
     }
 }
+
+struct VideoPlayerView: UIViewControllerRepresentable {
+    let videoURL: URL
+
+    func makeUIViewController(context: Context) -> AVPlayerViewController {
+        let player = AVPlayer(url: videoURL)
+        let playerViewController = AVPlayerViewController()
+        playerViewController.player = player
+        return playerViewController
+    }
+
+    func updateUIViewController(_ uiViewController: AVPlayerViewController, context: Context) {
+        // Update as needed
+    }
+}
+
 
 struct QuizOptionView: View {
     let question: String
@@ -140,5 +147,6 @@ struct QuizOptionView: View {
 //                .disabled(selectedAnswerIndex != nil)
 //            }
         }
+        
     }
 }
