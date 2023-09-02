@@ -11,11 +11,11 @@ The Study App is a Swift-based mobile application designed to facilitate simple 
 
 This project was made possible by the contributions of the following individuals:
 
-- [Danny]([https://github.com/contributor1](https://github.com/MyBoringFacts))
-- [Richard]([https://github.com/contributor2](https://github.com/luphone04))
-- [Lucas]([https://github.com/contributor3](https://github.com/Lucas1792003))
+- [Danny](https://github.com/MyBoringFacts)
+- [Richard](https://github.com/luphone04)
+- [Lucas](https://github.com/Lucas1792003)
 - [Jessica](https://github.com/jessicawinn)
-- [Alex]([https://github.com/contributor5](https://github.com/Lut-Lat-Aung))
+- [Alex](https://github.com/Lut-Lat-Aung)
 
 ## Project Status
 
