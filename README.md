@@ -1,5 +1,5 @@
 # TechOtaku
-# Code Lab Hackathon - Study App
+# D Code Lab Hackathon - Study App
 
 Welcome to the Code Lab Hackathon GitHub repository for the Study App project! This repository contains the source code and documentation for the Study App developed during the hackathon organized by Assumption University's Code Lab. 
 
