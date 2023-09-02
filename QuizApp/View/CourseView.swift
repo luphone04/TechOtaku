@@ -8,6 +8,7 @@
 import SwiftUI
 import AVKit
 import WebKit
+import AVFoundation
 
 
 struct CourseView: View {
@@ -59,59 +60,45 @@ struct CourseView_Previews: PreviewProvider {
 
 
 extension CourseView {
-    struct TopicDetailView: View {
-        let topic: Topic
-        //let quizQuestions: [QuizQuestion]
-        let player = AVPlayer(url: URL(fileURLWithPath: Bundle.main.path(forResource: "Primitive", ofType: "mp4")!))
-//        let layer = AVPlayerLayer(player: player)
-//        layer.frame = view.bounds
-//        view.layer.addSublayer(layer)
-        
-        @State private var selectedAnswerIndex: Int? = nil
-        @State private var isCorrect: Bool = false
-        
-        var body: some View {
-            VStack(alignment: .leading) {
-                Text(topic.title)
-                    .font(.title)
-                    .padding(.horizontal)
-                    .padding(.bottom, 5)
-                
-                Text(topic.description)
-                    .font(.body)
-                    .padding(.bottom, 0)
-                    .padding(.horizontal)
-                VideoView(videoID: topic.videoId)
-                    .frame(minHeight: 0, maxHeight: UIScreen.main.bounds.height *  0.3)
-                    .cornerRadius(12)
-                    .padding(.horizontal, 5)
-                
-
-                
-                Spacer()
-                
-                    .navigationBarTitle(topic.title, displayMode: .inline)
-            }
-        }
-    }
-}
-
-
-
-
-struct QuizOptionView: View {
-    let question: String
-    let options: [String]
-    let correctAnswerIndex: Int
-    @Binding var selectedAnswerIndex: Int?
-    let isCorrect: Bool
-    let checkAnswer: (Int?) -> Void
     
-    var body: some View {
-        VStack(alignment: .leading) {
-            Text(question)
-                .font(.subheadline)
-        }
-        
-    }
+    
+//    struct TopicDetailView: View {
+//        let topic: Topic
+//        //let quizQuestions: [QuizQuestion]
+//        let player = AVPlayer(url: URL(fileURLWithPath: Bundle.main.path(forResource: "Primitive", ofType: "mp4")!))
+////        let layer = AVPlayerLayer(player: player)
+////        layer.frame = view.bounds
+////        view.layer.addSublayer(layer)
+//        
+//        @State private var selectedAnswerIndex: Int? = nil
+//        @State private var isCorrect: Bool = false
+//        
+//        var body: some View {
+//            VStack(alignment: .leading) {
+//                Text(topic.title)
+//                    .font(.title)
+//                    .padding(.horizontal)
+//                    .padding(.bottom, 5)
+//                
+//                Text(topic.description)
+//                    .font(.body)
+//                    .padding(.bottom, 0)
+//                    .padding(.horizontal)
+//                VideoView(videoID: topic.videoId)
+//                    .frame(minHeight: 0, maxHeight: UIScreen.main.bounds.height *  0.3)
+//                    .cornerRadius(12)
+//                    .padding(.horizontal, 5)
+//                
+//
+//                
+//                Spacer()
+//                
+//                    .navigationBarTitle(topic.title, displayMode: .inline)
+//            }
+//        }
+//    }
 }
+
+
+
+
