@@ -1,0 +1,68 @@
+{
+    "response_code": 0,
+    "results": [
+        {
+            "category": "Basic Java Questions:",
+            "type": "multiple",
+            "difficulty": "easy",
+            "question": "What is the difference between int and Integer in Java?",
+            "correct_answer": "'int' is a primitive data type, while Integer is a wrapper class for 'int'.",
+            "incorrect_answers": [
+                "int can be null, while Integer cannot.",
+                "There is no difference; they are interchangeable.",
+                "int is used for floating-point numbers, and Integer is used for integers."
+            ]
+        },
+        {
+            "category": "Basic Java Questions:",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "How do you declare a constant in Java?",
+            "correct_answer": "Prefixing the variable with const",
+            "incorrect_answers": [
+                "Using the constant keyword",
+                "Prefixing the variable with final",
+                "Declaring it inside a method"
+            ]
+        },
+        
+        {
+            "category": "Control Flow and Operators:",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "What is the result of 5 + 3 * 2 in Java, and why?",
+            "correct_answer": "16, multiplication takes precedence over addition",
+            "incorrect_answers": [
+                "11, addition takes precedence over multiplication",
+                "26, addition and multiplication have equal precedence, so it's evaluated left to right.",
+                "32, addition is applied before multiplication due to parentheses."
+            ]
+        },
+        
+        {
+            "category": "Control Flow and Operators:",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "Explain the difference between the if, else if, and else statements in Java.",
+            "correct_answer": "Prefixing the variable with final",
+            "incorrect_answers": [
+                "if is used for conditional branching, else if is used for loops, and else is used for exceptions.",
+                "if is used for single conditional checks, else if is used for multiple conditions, and else is a catch-all.",
+                "if is used for numeric comparisons, else if is used for string comparisons, and else is used for logical operations."
+            ]
+        },
+        
+        {
+            "category": "Control Flow and Operators:",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "Explain the concept of short-circuiting in Java's logical operators (&& and ||).",
+            "correct_answer": "It means that if the first condition in a logical expression evaluates to true or false, the second condition is skipped.",
+            "incorrect_answers": [
+                "It's a technique for optimizing code execution.",
+                "It prevents the use of logical operators in Java.",
+                "It causes a runtime error when used with &&."
+            ]
+        }
+    ]
+}
