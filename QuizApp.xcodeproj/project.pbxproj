@@ -11,6 +11,10 @@
 		790A60AC2AA2E93E008DAC6E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790A60AB2AA2E93E008DAC6E /* ContentView.swift */; };
 		790A60AE2AA2E940008DAC6E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 790A60AD2AA2E940008DAC6E /* Assets.xcassets */; };
 		790A60B12AA2E940008DAC6E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 790A60B02AA2E940008DAC6E /* Preview Assets.xcassets */; };
+		790A60BE2AA2EAEA008DAC6E /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790A60BD2AA2EAEA008DAC6E /* CourseView.swift */; };
+		790A60C02AA2EB0F008DAC6E /* QuizViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790A60BF2AA2EB0F008DAC6E /* QuizViewModel.swift */; };
+		790A60C22AA2EB2B008DAC6E /* QuizModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790A60C12AA2EB2B008DAC6E /* QuizModel.swift */; };
+		790A60C52AA2EE26008DAC6E /* CourseDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790A60C42AA2EE26008DAC6E /* CourseDataService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		790A60AB2AA2E93E008DAC6E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		790A60AD2AA2E940008DAC6E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		790A60B02AA2E940008DAC6E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		790A60BD2AA2EAEA008DAC6E /* CourseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
+		790A60BF2AA2EB0F008DAC6E /* QuizViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizViewModel.swift; sourceTree = "<group>"; };
+		790A60C12AA2EB2B008DAC6E /* QuizModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizModel.swift; sourceTree = "<group>"; };
+		790A60C42AA2EE26008DAC6E /* CourseDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseDataService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +59,10 @@
 		790A60A82AA2E93E008DAC6E /* QuizApp */ = {
 			isa = PBXGroup;
 			children = (
+				790A60C32AA2EE00008DAC6E /* DataServices */,
+				790A60BC2AA2EAD3008DAC6E /* View */,
+				790A60BB2AA2EAC2008DAC6E /* ViewModel */,
+				790A60BA2AA2EA86008DAC6E /* Model */,
 				790A60A92AA2E93E008DAC6E /* QuizAppApp.swift */,
 				790A60AB2AA2E93E008DAC6E /* ContentView.swift */,
 				790A60AD2AA2E940008DAC6E /* Assets.xcassets */,
@@ -65,6 +77,38 @@
 				790A60B02AA2E940008DAC6E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		790A60BA2AA2EA86008DAC6E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				790A60C12AA2EB2B008DAC6E /* QuizModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		790A60BB2AA2EAC2008DAC6E /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				790A60BF2AA2EB0F008DAC6E /* QuizViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		790A60BC2AA2EAD3008DAC6E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				790A60BD2AA2EAEA008DAC6E /* CourseView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		790A60C32AA2EE00008DAC6E /* DataServices */ = {
+			isa = PBXGroup;
+			children = (
+				790A60C42AA2EE26008DAC6E /* CourseDataService.swift */,
+			);
+			path = DataServices;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +183,10 @@
 			files = (
 				790A60AC2AA2E93E008DAC6E /* ContentView.swift in Sources */,
 				790A60AA2AA2E93E008DAC6E /* QuizAppApp.swift in Sources */,
+				790A60C52AA2EE26008DAC6E /* CourseDataService.swift in Sources */,
+				790A60BE2AA2EAEA008DAC6E /* CourseView.swift in Sources */,
+				790A60C02AA2EB0F008DAC6E /* QuizViewModel.swift in Sources */,
+				790A60C22AA2EB2B008DAC6E /* QuizModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
