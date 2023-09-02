@@ -27,8 +27,7 @@ struct CourseView: View {
                             ForEach(0..<CourseDataService.topics.count, id: \.self) { index in
                                 NavigationLink(
                                     destination: TopicDetailView(
-                                        topic: CourseDataService.topics[index],
-                                        quizQuestions: primitiveTypesQuiz // Pass the appropriate quiz questions here
+                                        topic: CourseDataService.topics[index]
                                     )
                                 ) {
                                     Text(CourseDataService.topics[index].title)
@@ -62,7 +61,7 @@ struct CourseView_Previews: PreviewProvider {
 extension CourseView {
     struct TopicDetailView: View {
         let topic: Topic
-        let quizQuestions: [QuizQuestion]
+        //let quizQuestions: [QuizQuestion]
         let player = AVPlayer(url: URL(fileURLWithPath: Bundle.main.path(forResource: "Primitive", ofType: "mp4")!))
 //        let layer = AVPlayerLayer(player: player)
 //        layer.frame = view.bounds
@@ -82,7 +81,10 @@ extension CourseView {
                     .font(.body)
                     .padding(.bottom, 0)
                     .padding(.horizontal)
-                VideoView(videoID: "CX-BdDHW0Ho")
+                VideoView(videoID: topic.videoId)
+                    .frame(minHeight: 0, maxHeight: UIScreen.main.bounds.height *  0.3)
+                    .cornerRadius(12)
+                    .padding(.horizontal, 5)
                 
 
                 
@@ -94,20 +96,7 @@ extension CourseView {
     }
 }
 
-struct VideoPlayerView: UIViewControllerRepresentable {
-    let videoURL: URL
 
-    func makeUIViewController(context: Context) -> AVPlayerViewController {
-        let player = AVPlayer(url: videoURL)
-        let playerViewController = AVPlayerViewController()
-        playerViewController.player = player
-        return playerViewController
-    }
-
-    func updateUIViewController(_ uiViewController: AVPlayerViewController, context: Context) {
-        // Update as needed
-    }
-}
 
 
 struct QuizOptionView: View {
@@ -122,30 +111,6 @@ struct QuizOptionView: View {
         VStack(alignment: .leading) {
             Text(question)
                 .font(.subheadline)
-            
-//            ForEach(0..<options.count, id: \.self) { optionIndex in
-//                Button(action: {
-//                    selectedAnswerIndex = optionIndex
-//                    checkAnswer(optionIndex)
-//                }) {
-//                    Text(options[optionIndex])
-//                        .frame(maxWidth: .infinity)
-//                        .padding()
-//                        .background(
-//                            RoundedRectangle(cornerRadius: 10)
-//                                .foregroundColor(
-//                                    (selectedAnswerIndex == optionIndex && isCorrect) ? .green :
-//                                    (selectedAnswerIndex == optionIndex && !isCorrect) ? .red :
-//                                    .clear
-//                                )
-//                        )
-//                        .overlay(
-//                            RoundedRectangle(cornerRadius: 10)
-//                                .stroke(Color.blue, lineWidth: 1)
-//                        )
-//                }
-//                .disabled(selectedAnswerIndex != nil)
-//            }
         }
         
     }

@@ -21,7 +21,8 @@ class CourseDataService{
                         Examples are int, double, and boolean.
                         Read more about this at:
                         https://longbaonguyen.github.io/courses/apcsa/lecture2.pdf.
-                        """),
+                        """,
+            videoId: "cgp5ulbsdJ0"),
         
         Topic(
             title: "Using Objects",
@@ -34,8 +35,9 @@ class CourseDataService{
                         - String b = "text";
                         - String c; c = "text";
 
-                        Read more about this at https://longbaonguyen.github.io/courses/apcsa/lecture6.pdf.
-                        """),
+                        [Read more about this]{https://longbaonguyen.github.io/courses/apcsa/lecture6.pdf}.
+                        """,
+            videoId: "Mm06BuD3PlY"),
         
         Topic(
             title: "Boolean Expressions and If Statements",
@@ -51,43 +53,130 @@ class CourseDataService{
                          -
 
                          Read more about this at https://longbaonguyen.github.io/courses/apcsa/lecture9.pdf.
-                        """),
+                        """,
+            videoId: "6O_lwNnWFR0"),
         
         Topic(
             title: "Iteration",
-            description: "Looping in Java."),
+            description: """
+                         A for loop is a type of loop that has a conditional statement that is usually false at first. Everytime the condition is false, the code block runs. However, it also has a statement that increments a variable after each time the code runs, making the conditional statement slowly become true.
+                         Once the condition is true, the block of code stops running.
+
+                         Read more about this at https://longbaonguyen.github.io/courses/apcsa/lecture11.pdf.
+                        """,
+            videoId: "G3uNYHtn83c"),
         
         Topic(
             title: "Classes",
-            description: "Understanding Java classes and objects."),
+            description: """
+                         Once a java file runs, by default, it runs the main method. The main method is a public static method, and does not return anything
+                         The main method also can have input(s) as an array of strings.
+
+                         To intialize the main method, you write:
+                         public static void main (String[] args) {//code here}
+
+                         Read more about this at https://longbaonguyen.github.io/courses/apcsa/lecture13.pdf.
+                        """,
+            videoId: "vjjjGkXpX_I"),
         
         Topic(
             title: "Arrays",
-            description: "Working with arrays in Java."),
+            description: """
+                         If you are working with arrays(or other collections data structures), you can use an alternative syntax for a for loop (enhanced form of for loop) to iterate through items of arrays/collections.
+
+                         It is also referred as for-each loop because the loop iterates through each element of array/collection.
+
+                         Read more about this at https://longbaonguyen.github.io/courses/apcsa/lecture17.pdf.
+                        """,
+            videoId: "cgp5ulbsdJ0"),
         
         Topic(
             title: "ArrayLists",
-            description: "Introduction to ArrayLists."),
+            description: """
+                         An ArrayList (or list) is a collection storing an ordered sequence of elements.
+                         - each element is acccessible by a 0-based index
+                         - a list has a size (number of elements that have been added)
+                         - elements can be added to the front, back, or elsewhere
+                         - in Java, a list can be represented as an ArrayList object
+
+                         Read more about this at https://longbaonguyen.github.io/courses/apcsa/lecture18.pdf.
+                        """,
+            videoId: "xzjZy-dHHLw"),
         
         Topic(
             title: "2D Arrays",
-            description: "Working with two-dimensional arrays."),
+            description: """
+                         A two-dimensional (2D) array has rows and columns.
+                         A row has horizontal elements. A column has vertical elements.
+
+                         Two dimensional arrays are especially useful when the data is naturally organized in rows and columns like in a spreadsheet, bingo, battleship, theater seats, classroom seats, connect-four game, or a picture.
+
+                         To declare and initialzie a 2D array, write:
+                         type[][] name = new type[row][col];
+
+                         Read more about this at https://longbaonguyen.github.io/courses/apcsa/lecture18.pdf.
+                        """,
+            videoId: "L3-q2GxAqZA&t=173s"),
         
         Topic(
             title: "Overloading & Overriding",
-            description: "Polymorphism and method overriding."),
+            description: """
+                         A two-dimensional (2D) array has rows and columns.
+                         A row has horizontal elements. A column has vertical elements.
+
+                         Two dimensional arrays are especially useful when the data is naturally organized in rows and columns like in a spreadsheet, bingo, battleship, theater seats, classroom seats, connect-four game, or a picture.
+
+                         To declare and initialzie a 2D array, write:
+                         type[][] name = new type[row][col];
+
+                         Read more about this at https://longbaonguyen.github.io/courses/apcsa/lecture18.pdf.
+                        """,
+            videoId: "u4YcW-ex7Yk"),
         
         Topic(
             title: "Inheritance with Interface and Abstract Classes",
-            description: "Learn about interface and abstract classes."),
+            description: """
+                         A two-dimensional (2D) array has rows and columns.
+                         A row has horizontal elements. A column has vertical elements.
+
+                         Two dimensional arrays are especially useful when the data is naturally organized in rows and columns like in a spreadsheet, bingo, battleship, theater seats, classroom seats, connect-four game, or a picture.
+
+                         To declare and initialzie a 2D array, write:
+                         type[][] name = new type[row][col];
+
+                         Read more about this at https://longbaonguyen.github.io/courses/apcsa/lecture18.pdf.
+                        """,
+            videoId: "zbVAU7lK25Q"),
         
         Topic(
             title: "Exception Handling",
-            description: "Handling exceptions in Java."),
+            description: """
+                         A two-dimensional (2D) array has rows and columns.
+                         A row has horizontal elements. A column has vertical elements.
+
+                         Two dimensional arrays are especially useful when the data is naturally organized in rows and columns like in a spreadsheet, bingo, battleship, theater seats, classroom seats, connect-four game, or a picture.
+
+                         To declare and initialzie a 2D array, write:
+                         type[][] name = new type[row][col];
+
+                         Read more about this at https://longbaonguyen.github.io/courses/apcsa/lecture18.pdf.
+                        """,
+            videoId: "xNVlq9IEBEg"),
         
         Topic(
             title: "Multithreading",
-            description: "Introduction to multithreading.")
+            description: """
+                         A two-dimensional (2D) array has rows and columns.
+                         A row has horizontal elements. A column has vertical elements.
+
+                         Two dimensional arrays are especially useful when the data is naturally organized in rows and columns like in a spreadsheet, bingo, battleship, theater seats, classroom seats, connect-four game, or a picture.
+
+                         To declare and initialzie a 2D array, write:
+                         type[][] name = new type[row][col];
+
+                         Read more about this at https://longbaonguyen.github.io/courses/apcsa/lecture18.pdf.
+                        """,
+            videoId: "UfMM924sBvg")
     ]
     
 }

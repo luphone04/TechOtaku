@@ -9,6 +9,7 @@ import Foundation
 struct Topic {
     let title: String
     let description: String
+    let videoId: String
 }
 struct QuizQuestion {
     let question: String
